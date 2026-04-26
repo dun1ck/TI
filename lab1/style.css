@@ -1,0 +1,58 @@
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    background-color: aliceblue;
+    margin-left:30%;
+    margin-right:30%;
+}
+
+header {
+    background-color: lightgray;
+    padding: 1%;
+    margin-bottom: 0.5%;
+}
+
+.inputVals {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0.5%;
+}
+
+.outputVals {
+    margin-top:0.5%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0.5%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputDec {background-color: aqua}
+.inputVig {background-color: aquamarine}
+.outputDec {background-color: aqua}
+.outputVig {background-color: aquamarine}
+
+.getVals {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 50%;
+    margin: 3%
+}
+.buttons button {
+    height: 150%;
+}
+
+.outputVals input {
+
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная №1 ТИ Кабердин Д.Д.</title>
+</head>
+
+<body>
+    <header>
+        <h1>Лабораторная №1 шифрование</h1>
+    </header>
+
+    <main>
+        <div class="inputVals">
+            <div class="inputDec">
+            <h2>Метод децимации</h2>
+            <div class="getVals">
+                <label for="strInputDec">Введите строку: </label>
+                <input type="text" id="strInputDec">
+
+                <label for="numInputDec">Введите ключ: </label>
+                <input type="number" id="numInputDec">
+            </div>
+
+            <div class="buttons">
+                <button class="cipher">Шифровать</button>
+                <button class="decipher">Дешифровать</button>
+            </div>
+        </div>
+            <div class ="inputVig">
+            <h2>Метод виженера</h2>
+            <div class="getVals">
+                <label for="strInputVig">Введите строку: </label>
+                <input type="text" id="strInputVig">
+
+                <label for="numInputVig">Введите ключ: </label>
+                <input type="number" id="numInputVig">
+            </div>
+            <div class="buttons">
+                <button class="cipher">Шифровать</button>
+                <button class="decipher">Дешифровать</button>
+            </div>
+        </div>
+        </div>
+
+        <div class="outputVals">
+            <div class="outputDec">
+                <label for="lbOutputDec">Результат:</label><input disabled type="text" id="lbOutputDec">
+            </div>
+            <div class="outputVig">
+                <label for="lbOutputVig">Результат:</label><input disabled type="text" id="lbOutputVig">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h5>Кабердин Д.Д. 2026</h5>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
