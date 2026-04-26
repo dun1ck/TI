@@ -154,4 +154,5 @@ function decrypt() {
     };
 
     reader.readAsArrayBuffer(file);
+
 }
