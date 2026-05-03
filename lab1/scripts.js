@@ -178,8 +178,6 @@ function saveTextareaToFile(textareaId, defaultFilename) {
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
 }
-
-// --------- Инициализация для децимации ----------
 document.getElementById("decLoadFile").addEventListener("click", () => {
     const fileInput = document.getElementById("decFileInput");
     loadFileIntoTextarea(fileInput, "decText");
