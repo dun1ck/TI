@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LFSR-28 потоковое шифрование</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>LFSR-28 потоковое шифрование</h1>
+    <p>Полином: x<sup>28</sup> + x<sup>3</sup> + 1</p>
+
+    <div class="input-group">
+        <label>Начальное состояние регистра (28 бит, только 0/1):</label>
+        <input type="text" id="initialState" maxlength="28" placeholder="например 101010... 28 символов">
+        <div class="hint">Введите 28 символов, состоящих только из 0 и 1</div>
+    </div>
+
+    <div class="input-group">
+        <label>Выберите файл для шифрования/дешифрования:</label>
+        <input type="file" id="fileInput">
+    </div>
+
+    <div class="button-group">
+        <button id="encryptBtn">Зашифровать</button>
+        <button id="decryptBtn">Расшифровать</button>
+    </div>
+
+    <div class="output-group">
+        <div>
+            <h3>Сгенерированный ключ (первые 256 бит ... последние 256 бит):</h3>
+            <div class="binary-box" id="keyDisplay"></div>
+        </div>
+        <div>
+            <h3>Исходный файл (первые 256 бит ... последние 256 бит):</h3>
+            <div class="binary-box" id="originalDisplay"></div>
+        </div>
+        <div>
+            <h3>Результат (первые 256 бит ... последние 256 бит):</h3>
+            <div class="binary-box" id="resultDisplay"></div>
+        </div>
+    </div>
+
+    <div class="status" id="status"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

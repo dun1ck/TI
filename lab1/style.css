@@ -1,58 +1,106 @@
-h1{
-    text-align: center;
-}
-h2{
-    text-align: center;
-    background-color: aliceblue;
-    margin-left:30%;
-    margin-right:30%;
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fff;
 }
 
 header {
-    background-color: lightgray;
-    padding: 1%;
-    margin-bottom: 0.5%;
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.inputVals {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:0.5%;
+h1 {
+    font-size: 24px;
+    margin: 0;
 }
 
-.outputVals {
-    margin-top:0.5%;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:0.5%;
+h2 {
+    background-color: #ddd;
+    padding: 8px;
+    margin: 0 0 15px 0;
+    font-size: 18px;
 }
 
-main{
+main {
     display: flex;
-    flex-direction: column;
+    gap: 20px;
 }
 
-.inputDec {background-color: aqua}
-.inputVig {background-color: aquamarine}
-.outputDec {background-color: aqua}
-.outputVig {background-color: aquamarine}
+.algorithm-section {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
 
-.getVals {
+.input-area, .output-area {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 5px;
+    font-family: 'Courier New', monospace;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.key-input {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.key-hint {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.file-row {
     display: flex;
-    flex-direction: column;
     gap: 10px;
+    align-items: center;
+    margin: 10px 0;
 }
 
-.buttons {
-    display: grid;
-    grid-template-columns:1fr 1fr;
-    gap: 50%;
-    margin: 3%
-}
-.buttons button {
-    height: 150%;
+.file-row input {
+    flex: 1;
 }
 
-.outputVals input {
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
 
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.output-area button {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #eee;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+    }
 }

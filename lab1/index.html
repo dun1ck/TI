@@ -1,64 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" href="style.css">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Лабораторная №1 ТИ Кабердин Д.Д.</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <h1>Лабораторная №1 шифрование</h1>
-    </header>
 
-    <main>
-        <div class="inputVals">
-            <div class="inputDec">
-            <h2>Метод децимации</h2>
-            <div class="getVals">
-                <label for="strInputDec">Введите строку: </label>
-                <input type="text" id="strInputDec">
+<header>
+    <h1>Лабораторная №1: шифрование (децимация + Виженер)</h1>
+</header>
 
-                <label for="numInputDec">Введите ключ: </label>
-                <input type="number" id="numInputDec">
+<main>
+    <div class="algorithm-section">
+        <h2>Метод децимации (английский текст)</h2>
+
+        <div class="input-area">
+            <label>Входной текст:</label>
+            <textarea id="decText" rows="4" placeholder="Введите английский текст или загрузите из файла..."></textarea>
+
+            <div class="file-row">
+                <input type="file" id="decFileInput" accept=".txt">
+                <button id="decLoadFile">Загрузить из файла</button>
             </div>
 
-            <div class="buttons">
-                <button class="cipher">Шифровать</button>
-                <button class="decipher">Дешифровать</button>
-            </div>
-        </div>
-            <div class ="inputVig">
-            <h2>Метод виженера</h2>
-            <div class="getVals">
-                <label for="strInputVig">Введите строку: </label>
-                <input type="text" id="strInputVig">
-
-                <label for="numInputVig">Введите ключ: </label>
-                <input type="number" id="numInputVig">
-            </div>
-            <div class="buttons">
-                <button class="cipher">Шифровать</button>
-                <button class="decipher">Дешифровать</button>
-            </div>
-        </div>
+            <label>Ключ (число, взаимно простое с 26):</label>
+            <input type="number" id="decKey" value="3" class="key-input">
         </div>
 
-        <div class="outputVals">
-            <div class="outputDec">
-                <label for="lbOutputDec">Результат:</label><input disabled type="text" id="lbOutputDec">
-            </div>
-            <div class="outputVig">
-                <label for="lbOutputVig">Результат:</label><input disabled type="text" id="lbOutputVig">
-            </div>
+        <div class="action-buttons">
+            <button id="decEncrypt">Шифровать</button>
+            <button id="decDecrypt">Расшифровать</button>
         </div>
-    </main>
 
-    <footer>
-        <h5>Кабердин Д.Д. 2026</h5>
-    </footer>
-    <script src="scripts.js"></script>
+        <div class="output-area">
+            <label>Результат:</label>
+            <textarea id="decResult" rows="4" readonly></textarea>
+            <button id="decSaveResult">Сохранить в файл</button>
+        </div>
+    </div>
+
+    <div class="algorithm-section">
+        <h2>Алгоритм Виженера (русский текст)</h2>
+
+        <div class="input-area">
+            <label>Входной текст:</label>
+            <textarea id="vigText" rows="4" placeholder="Введите русский текст или загрузите из файла..."></textarea>
+
+            <div class="file-row">
+                <input type="file" id="vigFileInput" accept=".txt">
+                <button id="vigLoadFile">Загрузить из файла</button>
+            </div>
+
+            <label>Ключевое слово (русские буквы):</label>
+            <input type="text" id="vigKey" value="ключ" class="key-input">
+        </div>
+
+        <div class="action-buttons">
+            <button id="vigEncrypt">Шифровать</button>
+            <button id="vigDecrypt">Расшифровать</button>
+        </div>
+
+        <div class="output-area">
+            <label>Результат:</label>
+            <textarea id="vigResult" rows="4" readonly></textarea>
+            <button id="vigSaveResult">Сохранить в файл</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>Кабердин Д.Д. 2026</p>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
-
 </html>
