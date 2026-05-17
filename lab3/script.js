@@ -1,5 +1,3 @@
-// ---------- МАТЕМАТИКА ----------
-
 function isPrime(n) {
     if (n < 2) return false;
     for (let i = 2; i * i <= n; i++)
@@ -7,6 +5,7 @@ function isPrime(n) {
     return true;
 }
 
+// обычный метод Евклида
 function gcd(a, b) {
     while (b !== 0) {
         [a, b] = [b, a % b];
@@ -53,7 +52,18 @@ function validateEncrypt(p, q, d) {
         return false;
     }
 
+    let n = p * q;
     let phi = (p - 1) * (q - 1);
+
+    if (n < 256) {
+        alert("n = p * q должно быть не меньше 256");
+        return false;
+    }
+
+    if (n > 65535) {
+        alert("n = p * q не должно превышать 65535");
+        return false;
+    }
 
     if (d <= 1 || d >= phi) {
         alert("d должно быть в диапазоне (1, φ(n))");
@@ -65,6 +75,22 @@ function validateEncrypt(p, q, d) {
         return false;
     }
 
+    return true;
+}
+
+function validateDecrypt(r, d) {
+    if (r < 256) {
+        alert("r (модуль n) должно быть не меньше 256");
+        return false;
+    }
+    if (r > 65535) {
+        alert("r (модуль n) не должно превышать 65535");
+        return false;
+    }
+    if (!d || d < 2) {
+        alert("d должно быть больше 1");
+        return false;
+    }
     return true;
 }
 
@@ -128,6 +154,12 @@ function decrypt() {
     let r = +document.getElementById("r").value;
     let d = +document.getElementById("d2").value;
     let file = document.getElementById("fileDec").files[0];
+
+    if (!validateDecrypt(r, d)) return;
+    if (!file) {
+        alert("Выберите файл");
+        return;
+    }
 
     if (!r || !d || !file) {
         alert("Введите r, d и выберите файл");
