@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -103,4 +104,111 @@ footer {
     main {
         flex-direction: column;
     }
+=======
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fff;
+}
+
+header {
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+h2 {
+    background-color: #ddd;
+    padding: 8px;
+    margin: 0 0 15px 0;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+.algorithm-section {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.input-area, .output-area {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 5px;
+    font-family: 'Courier New', monospace;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.key-input {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.key-hint {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.file-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.file-row input {
+    flex: 1;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.output-area button {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #eee;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+    }
+>>>>>>> d96ecc93ef7b21f434ac67ff8c3349459d54f868
 }

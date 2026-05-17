@@ -8,7 +8,11 @@ function gcd(a, b) {
     return a;
 }
 
+<<<<<<< HEAD
 // Поиск обратного числа по модулю 26(m)
+=======
+// Поиск обратного числа по модулю 26 (для расшифровки)
+>>>>>>> d96ecc93ef7b21f434ac67ff8c3349459d54f868
 function modInverse(a, m) {
     a = ((a % m) + m) % m;
     for (let x = 1; x < m; x++) {
@@ -196,7 +200,11 @@ document.getElementById("decEncrypt").addEventListener("click", () => {
         alert("Ключ должен быть взаимно прост с 26 (например, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25)");
         return;
     }
+<<<<<<< HEAD
     const result = decryptDecimation(text, key);
+=======
+    const result = encryptDecimation(text, key); // Внимание: в моих функциях шифрование = умножение на ключ
+>>>>>>> d96ecc93ef7b21f434ac67ff8c3349459d54f868
     document.getElementById("decResult").value = result;
 });
 document.getElementById("decDecrypt").addEventListener("click", () => {
@@ -206,7 +214,11 @@ document.getElementById("decDecrypt").addEventListener("click", () => {
         alert("Введите числовой ключ");
         return;
     }
+<<<<<<< HEAD
     const result = encryptDecimation(text, key);
+=======
+    const result = decryptDecimation(text, key);
+>>>>>>> d96ecc93ef7b21f434ac67ff8c3349459d54f868
     document.getElementById("decResult").value = result;
 });
 
